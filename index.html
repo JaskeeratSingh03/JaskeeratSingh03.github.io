@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#7c3aed" />
+  <title>Jaskeerat Singh — ML Engineer</title>
+  <meta name="description" content="Portfolio of Jaskeerat Singh, ML Engineer based in Jalandhar, Punjab." />
+  <meta name="author" content="Jaskeerat Singh" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jaskeerat Singh — ML Engineer" />
+  <meta property="og:description" content="ML engineer based in Jalandhar, Punjab. Building with Python, C, C++ and a love for clean systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://JaskeeratSingh03.github.io/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#home" aria-label="Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text">JS</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-cta" href="mailto:jaskeeratinfinity4952@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner" data-reveal>
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Jaskeerat&nbsp;Singh</h1>
+        <p class="hero-tagline">ML Engineer</p>
+        <p class="hero-location">
+          <span aria-hidden="true">📍</span> Jalandhar, Punjab, India
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:jaskeeratinfinity4952@gmail.com">
+            Get in touch
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#projects">See my work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container" data-reveal>
+        <header class="section-header">
+          <p class="eyebrow">Featured work</p>
+          <h2>Projects</h2>
+          <p class="section-sub">
+            Two shipped projects from my GitHub, plus two I'm currently building.
+          </p>
+        </header>
+
+        <div class="grid">
+          <!-- 1: Expense Tracker -->
+          <article class="card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-live">Live</span>
+              <h3>Expense Tracker v2.0</h3>
+            </div>
+            <p>
+              A user-friendly Python app that tracks cash flow and stores entries
+              in plain files you can review at any time — robust and beginner-friendly.
+            </p>
+            <ul class="bullets">
+              <li>Persistent file-based storage (no database setup)</li>
+              <li>Clean CLI + lightweight GUI</li>
+              <li>CSV export for monthly reports</li>
+            </ul>
+            <div class="card-foot">
+              <p class="stack"><span>Python</span></p>
+              <a class="card-link" href="https://github.com/JaskeeratSingh03/Expense_Tracker_v2.0-" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- 2: Markov process demo -->
+          <article class="card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-live">Live</span>
+              <h3>Markov Process Demo</h3>
+            </div>
+            <p>
+              An interactive Python demo that explains the Markov process
+              and walks the user through state transitions step-by-step.
+            </p>
+            <ul class="bullets">
+              <li>Visualizes state transition matrices</li>
+              <li>Step-by-step simulation with user input</li>
+              <li>Great for teaching probability &amp; stochastic processes</li>
+            </ul>
+            <div class="card-foot">
+              <p class="stack"><span>Python</span></p>
+              <a class="card-link" href="https://github.com/JaskeeratSingh03/Markov-process-demo" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- 3: CipherVault (to build) -->
+          <article class="card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-soon">Building</span>
+              <h3>CipherVault</h3>
+            </div>
+            <p>
+              A C++ command-line tool that bundles classic ciphers with modern
+              encryption — designed for learning cryptography fundamentals
+              by experiment.
+            </p>
+            <ul class="bullets">
+              <li>Implements Caesar, Vigenère &amp; AES-256-CBC behind a single unified interface</li>
+              <li>OpenSSL integration for production-grade symmetric encryption</li>
+              <li>~40 unit tests covering edge cases, padding &amp; key validation</li>
+              <li>CMake build system — clean build on macOS &amp; Linux</li>
+            </ul>
+            <div class="card-foot">
+              <p class="stack">
+                <span>C++</span><span>OpenSSL</span><span>CMake</span>
+              </p>
+              <a class="card-link" href="#" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- 4: DSA Visualizer (to build) -->
+          <article class="card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-soon">Building</span>
+              <h3>DSA Visualizer</h3>
+            </div>
+            <p>
+              A Python + Flask web app that visualizes classic data-structure
+              &amp; algorithm problems in real time — built as an interactive
+              learning companion.
+            </p>
+            <ul class="bullets">
+              <li>Animates Bubble, Merge &amp; Quick sort on user-generated arrays</li>
+              <li>BFS / DFS / Dijkstra on user-drawn graphs</li>
+              <li>Live complexity readout (<code>O(n log n)</code>, <code>O(V+E)</code>, …) beside each visualization</li>
+              <li>Step-through mode for instructors &amp; self-study</li>
+            </ul>
+            <div class="card-foot">
+              <p class="stack">
+                <span>Python</span><span>Flask</span><span>JavaScript</span>
+              </p>
+              <a class="card-link" href="#" target="_blank" rel="noopener">
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="container" data-reveal>
+        <header class="section-header">
+          <p class="eyebrow">What I work with</p>
+          <h2>Skills</h2>
+          <p class="section-sub">The core tools and topics I'm actively sharpening.</p>
+        </header>
+
+        <ul class="chips" aria-label="Skills">
+          <li class="chip">
+            <span class="chip-dot" aria-hidden="true"></span>
+            Python
+          </li>
+          <li class="chip">
+            <span class="chip-dot" aria-hidden="true"></span>
+            C
+          </li>
+          <li class="chip">
+            <span class="chip-dot" aria-hidden="true"></span>
+            C++
+          </li>
+          <li class="chip">
+            <span class="chip-dot" aria-hidden="true"></span>
+            Database Management
+          </li>
+          <li class="chip">
+            <span class="chip-dot" aria-hidden="true"></span>
+            Data Structures &amp; Algorithms
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / EDUCATION ===== -->
+    <section id="experience" class="section">
+      <div class="container" data-reveal>
+        <header class="section-header">
+          <p class="eyebrow">Path so far</p>
+          <h2>Experience &amp; Education</h2>
+          <p class="section-sub">Add your entries here — they appear as a vertical timeline.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <span class="timeline-when">[Add period, e.g. 2023 – Present]</span>
+              <h3>[Degree / Role title]</h3>
+              <p class="timeline-org">[Organization / University]</p>
+              <p>[One-line description of what you studied or worked on.]</p>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <span class="timeline-when">[Add period]</span>
+              <h3>[Another degree / role]</h3>
+              <p class="timeline-org">[Organization]</p>
+              <p>[One-line description.]</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="timeline-hint">
+          💡 To add more entries, copy any <code>&lt;li class="timeline-item"&gt;…&lt;/li&gt;</code>
+          block in <code>index.html</code> and replace the bracketed text.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> Jaskeerat Singh · Built with HTML &amp; CSS ·
+        Hosted on GitHub Pages
+      </p>
+      <p class="footer-links">
+        <a href="mailto:jaskeeratinfinity4952@gmail.com">Email</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/JaskeeratSingh03" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
