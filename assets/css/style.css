@@ -1,29 +1,29 @@
 /* ==========================================================================
    Portfolio â€” Jaskeerat Singh
-   Theme: purple / white / black with auto dark mode
+   Theme: permanent black with purple accents
    ========================================================================== */
 
 /* ---------- 1. Theme tokens ---------- */
 :root {
-  /* Surfaces */
-  --bg:        #ffffff;
-  --bg-alt:    #f6f4fb;            /* soft purple-tinted off-white */
-  --fg:        #0e0b14;            /* near-black with slight purple */
-  --fg-muted:  #5a526a;
+  /* Surfaces â€” permanently black */
+  --bg:        #000000;
+  --bg-alt:    #0b0712;
+  --fg:        #f4eefc;
+  --fg-muted:  #a99cc4;
 
   /* Brand */
-  --accent:        #7c3aed;        /* primary purple */
-  --accent-2:      #a855f7;        /* lighter purple */
-  --accent-3:      #2e1065;        /* deep purple */
+  --accent:        #a855f7;
+  --accent-2:      #c084fc;
+  --accent-3:      #d8b4fe;
 
   /* Lines */
-  --border:        #ece7f5;
-  --border-strong: #d8cdee;
+  --border:        #1a1426;
+  --border-strong: #2a1f3d;
 
   /* Effects */
-  --shadow-sm: 0 1px 2px rgba(46, 16, 101, 0.05);
-  --shadow-md: 0 10px 30px -10px rgba(124, 58, 237, 0.18);
-  --shadow-lg: 0 20px 50px -12px rgba(124, 58, 237, 0.28);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px -10px rgba(168, 85, 247, 0.35);
+  --shadow-lg: 0 20px 50px -12px rgba(168, 85, 247, 0.50);
 
   /* Layout */
   --max-w: 1100px;
@@ -35,28 +35,13 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:        #0b0712;
-    --bg-alt:    #150e22;
-    --fg:        #f6f4fb;
-    --fg-muted:  #a99cc4;
-    --accent:    #a855f7;
-    --accent-2:  #c084fc;
-    --accent-3:  #c4b5fd;
-    --border:    #2a1f3d;
-    --border-strong: #3d2c58;
-    --shadow-md: 0 10px 30px -10px rgba(168, 85, 247, 0.25);
-    --shadow-lg: 0 20px 50px -12px rgba(168, 85, 247, 0.35);
-  }
-}
-
 /* ---------- 2. Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* compensate for sticky nav */
+  background: #000;
 }
 body {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -108,10 +93,7 @@ code {
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 6px;
-  color: var(--accent-3);
-}
-@media (prefers-color-scheme: dark) {
-  code { color: var(--accent-2); }
+  color: var(--accent-2);
 }
 
 /* ---------- 4. Layout ---------- */
@@ -143,14 +125,11 @@ code {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(0, 0, 0, 0.72);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
-}
-@media (prefers-color-scheme: dark) {
-  .nav { background: rgba(11, 7, 18, 0.72); }
 }
 .nav.is-scrolled { border-bottom-color: var(--border); box-shadow: var(--shadow-sm); }
 
@@ -272,20 +251,12 @@ code {
   inset: -20% -20% auto -20%;
   height: 70%;
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(124, 58, 237, 0.30), transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.20), transparent 60%),
-    radial-gradient(ellipse at 20% 30%, rgba(46, 16, 101, 0.25),  transparent 60%);
+    radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.35), transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.25), transparent 60%),
+    radial-gradient(ellipse at 20% 30%, rgba(192, 132, 252, 0.20),  transparent 60%);
   filter: blur(20px);
   z-index: 0;
   pointer-events: none;
-}
-@media (prefers-color-scheme: dark) {
-  .hero-glow {
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.30), transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.20), transparent 60%),
-      radial-gradient(ellipse at 20% 30%, rgba(192, 132, 252, 0.18), transparent 60%);
-  }
 }
 .hero-inner {
   position: relative;
@@ -371,9 +342,7 @@ code {
   border-radius: var(--radius);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .card { background: var(--bg-alt); }
-}
+.card { background: var(--bg-alt); }
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
@@ -399,18 +368,14 @@ code {
   white-space: nowrap;
 }
 .badge-live {
-  color: #166534;
-  background: #dcfce7;
-  border: 1px solid #bbf7d0;
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.10);
+  border: 1px solid rgba(34, 197, 94, 0.30);
 }
 .badge-soon {
-  color: var(--accent-3);
-  background: rgba(124, 58, 237, 0.10);
-  border: 1px solid rgba(124, 58, 237, 0.30);
-}
-@media (prefers-color-scheme: dark) {
-  .badge-live { color: #4ade80; background: rgba(34, 197, 94, 0.10); border-color: rgba(34, 197, 94, 0.30); }
-  .badge-soon { color: var(--accent-2); background: rgba(168, 85, 247, 0.10); border-color: rgba(168, 85, 247, 0.30); }
+  color: var(--accent-2);
+  background: rgba(168, 85, 247, 0.10);
+  border: 1px solid rgba(168, 85, 247, 0.30);
 }
 
 .bullets {
@@ -456,12 +421,9 @@ code {
   font-weight: 500;
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
-  background: var(--bg-alt);
+  background: rgba(168, 85, 247, 0.08);
   border: 1px solid var(--border);
-  color: var(--accent-3);
-}
-@media (prefers-color-scheme: dark) {
-  .stack span { color: var(--accent-2); background: rgba(168, 85, 247, 0.08); }
+  color: var(--accent-2);
 }
 .card-link {
   font-weight: 600;
@@ -493,9 +455,7 @@ code {
   color: var(--fg);
   transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .chip { background: var(--bg-alt); }
-}
+.chip { background: var(--bg-alt); }
 .chip:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
@@ -543,13 +503,10 @@ code {
 }
 .timeline-card {
   padding: 1.25rem 1.5rem;
-  background: var(--bg);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
-}
-@media (prefers-color-scheme: dark) {
-  .timeline-card { background: var(--bg-alt); }
 }
 .timeline-card:hover {
   transform: translateX(4px);
@@ -611,7 +568,60 @@ code {
   align-items: center;
 }
 
-/* ---------- 12. Reveal animations ---------- */
+/* ---------- 12. About section ---------- */
+.container-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.about-text {
+  font-size: 1.075rem;
+  line-height: 1.75;
+  color: var(--fg-muted);
+  text-align: center;
+}
+.about-text strong { color: var(--fg); }
+
+/* ---------- 13. Certifications ---------- */
+.cert-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.cert-card { padding: 1.75rem; }
+.cert-issuer {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-top: -0.5rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 14. Enderman-style purple particle canvas ---------- */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ---------- 14b. Scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 12px var(--accent);
+  z-index: 200;
+  transition: width 80ms linear;
+  pointer-events: none;
+}
+
+/* ---------- 15. Reveal animations ---------- */
 [data-reveal] {
   opacity: 0;
   transform: translateY(20px);
