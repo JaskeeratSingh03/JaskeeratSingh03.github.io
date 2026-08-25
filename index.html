@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,6 +26,12 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <!-- ===== Scroll progress bar ===== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== Enderman-style purple particle canvas ===== -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
   <!-- ===== Navigation ===== -->
   <header class="nav" id="nav">
     <div class="nav-inner">
@@ -39,8 +46,10 @@
 
       <nav class="nav-menu" id="navMenu" aria-label="Primary">
         <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
         <a href="#experience">Experience</a>
         <a class="nav-cta" href="mailto:jaskeeratinfinity4952@gmail.com">Contact</a>
       </nav>
@@ -64,6 +73,27 @@
             <span aria-hidden="true">→</span>
           </a>
           <a class="btn btn-ghost" href="#projects">See my work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container" data-reveal>
+        <header class="section-header">
+          <p class="eyebrow">A bit about me</p>
+          <h2>About</h2>
+          <p class="section-sub">A short, honest introduction.</p>
+        </header>
+
+        <div class="container-narrow">
+          <p class="about-text">
+            I'm Jaskeerat, an ML engineer based in Jalandhar, Punjab. I work
+            mostly with Python, C and C++, and I'm at the stage where I'm
+            turning what I learn into small, working projects. I'd rather
+            understand one tool deeply than skim ten — clean code, clear logic,
+            systems I can reason about.
+          </p>
         </div>
       </div>
     </section>
@@ -214,6 +244,70 @@
             Data Structures &amp; Algorithms
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="section">
+      <div class="container" data-reveal>
+        <header class="section-header">
+          <p class="eyebrow">What I'm working towards</p>
+          <h2>Certifications</h2>
+          <p class="section-sub">Three foundational certifications on my roadmap — practical and achievable alongside semester coursework.</p>
+        </header>
+
+        <div class="grid cert-grid">
+          <article class="card cert-card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-soon">Planned</span>
+              <h3>Python for Everybody Specialization</h3>
+            </div>
+            <p class="cert-issuer">University of Michigan · Coursera · Charles Severance</p>
+            <p>
+              A beginner-friendly, end-to-end Python track that builds clean
+              programming fundamentals and basic data handling.
+            </p>
+            <ul class="bullets">
+              <li>Covers syntax, data structures, files and web access</li>
+              <li>Uses Python to work with APIs and databases</li>
+              <li>A solid base for everything ML on top of it</li>
+            </ul>
+          </article>
+
+          <article class="card cert-card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-soon">Planned</span>
+              <h3>CS50's Introduction to Computer Science</h3>
+            </div>
+            <p class="cert-issuer">Harvard University · edX · David Malan</p>
+            <p>
+              A broad CS foundation that complements your B.Tech — algorithms,
+              data structures and thinking like a computer scientist.
+            </p>
+            <ul class="bullets">
+              <li>Problem sets in C, Python and JavaScript</li>
+              <li>Core data structures and algorithms, taught well</li>
+              <li>Free to audit; widely respected globally</li>
+            </ul>
+          </article>
+
+          <article class="card cert-card" data-reveal>
+            <div class="card-top">
+              <span class="badge badge-soon">Planned</span>
+              <h3>Machine Learning with Python</h3>
+            </div>
+            <p class="cert-issuer">freeCodeCamp · freeCodeCamp.org</p>
+            <p>
+              A free, project-based ML track that takes you from linear
+              regression to neural networks with hands-on coding.
+            </p>
+            <ul class="bullets">
+              <li>Builds 5 real ML projects for the certification</li>
+              <li>Covers regression, classification, clustering and neural nets</li>
+              <li>Free and self-paced — fits around semester work</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
