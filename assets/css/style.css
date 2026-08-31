@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Portfolio â€” Jaskeerat Singh
+   Portfolio — Jaskeerat Singh
    Theme: permanent black with purple accents
    ========================================================================== */
 
 /* ---------- 1. Theme tokens ---------- */
 :root {
-  /* Surfaces â€” permanently black */
+  /* Surfaces — permanently black */
   --bg:        #000000;
   --bg-alt:    #0b0712;
   --fg:        #f4eefc;
@@ -262,6 +262,16 @@ code {
   position: relative;
   z-index: 1;
   text-align: center;
+}
+.hero-photo {
+  width: clamp(7.5rem, 15vw, 11.5rem);
+  aspect-ratio: 1;
+  margin: 0 auto 1.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.12), var(--shadow-lg);
 }
 .hero-name {
   font-size: clamp(2.8rem, 8vw + 1rem, 6rem);
