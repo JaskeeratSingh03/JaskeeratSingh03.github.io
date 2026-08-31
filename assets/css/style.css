@@ -264,8 +264,10 @@ code {
   text-align: center;
 }
 .hero-photo {
-  width: clamp(7.5rem, 15vw, 11.5rem);
-  aspect-ratio: 1;
+  --hero-photo-size: clamp(7.5rem, 15vw, 11.5rem);
+  width: var(--hero-photo-size);
+  height: var(--hero-photo-size);
+  aspect-ratio: 1 / 1;
   margin: 0 auto 1.5rem;
   border: 2px solid var(--accent);
   border-radius: 50%;
